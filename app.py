@@ -4,10 +4,10 @@ import requests
 import time
 import requests.exceptions  # Import the exceptions module
 
-API_KEY = "e81d85bc60e0d32c1f1982c204d2ef2a"  # replace with your TMDB API key
+API_KEY = "e81d85bc60e0d32c1f1982c204d2ef2a"
 
 
-# ✅ Cached fetch with smarter error handling
+# Cached fetch with smarter error handling
 @st.cache_data
 def fetch_poster(movie_id, retries=3, delay=2):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}"
